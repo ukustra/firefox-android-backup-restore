@@ -49,8 +49,10 @@ To backup, prepare to receive the backup data in the terminal:
 
 ```sh
 adb reverse tcp:12101 tcp:12101
-nc -l -s 127.0.0.1 -p 12101 > firefox-android-backup.tar.gz
+nc64 -l -s 127.0.0.1 -p 12101 > firefox-android-backup.tar.gz
 ```
+
+If the second command doesn't work, download NetCat: https://stackoverflow.com/questions/34924089/windows-7-netcat-error-nc-is-not-recognized-as-an-internal-or-external-comman
 
 Open the Firefox app on your phone, and visit `about:blank` (any webpage works).
 Copy the contents of [`snippets_for_firefox_debugging.js`](snippets_for_firefox_debugging.js).
